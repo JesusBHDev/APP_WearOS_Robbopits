@@ -49,21 +49,21 @@ fun PedidosScreen(userId: String) {
         modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFF001F54)) // Azul marino
-            .padding(16.dp),
-        verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         if (errorMessage.isNotEmpty()) {
             Text(
                 errorMessage,
                 color = MaterialTheme.colors.error,
                 fontWeight = FontWeight.Bold,
-                fontSize = 18.sp
+                fontSize = 18.sp,
+                modifier = Modifier.padding(16.dp)
             )
         } else {
             LazyColumn(
                 horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp)
             ) {
                 item {
                     Column(
