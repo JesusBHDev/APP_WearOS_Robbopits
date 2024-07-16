@@ -7,7 +7,7 @@ import retrofit2.http.Path
 
 data class LoginRequest(val Email: String, val Password: String)
 data class LoginResponse(val success: Boolean, val id: String, val Nombre: String)
-// Ajustar la clase Pedido para coincidir con la estructura JSON del backend
+
 data class Producto(
     val productId: String,
     val name: String,
@@ -41,5 +41,5 @@ interface ApiService {
     suspend fun login(@Body request: LoginRequest): LoginResponse
 
     @GET("/api/pedidosCliente/{userId}")
-    suspend fun getPedidos(@Path("userId") userId: String): PedidoResponse
+    suspend fun getPedidos(@Path("userId") userId: String): PedidoResponse // Cambiado a PedidoResponse
 }
