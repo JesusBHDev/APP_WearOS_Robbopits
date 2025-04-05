@@ -25,5 +25,3 @@
 | Express.js     | Framework del servidor REST               |
 | MongoDB        | Base de datos para almacenar la info      |
 
-
-## 🖼️ Capturas (Opcional)
